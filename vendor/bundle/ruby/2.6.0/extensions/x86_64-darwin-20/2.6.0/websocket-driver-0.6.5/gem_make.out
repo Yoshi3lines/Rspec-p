@@ -1,0 +1,15 @@
+current directory: /Users/yoshinorinakagawa/workspace/practice/everydayrails-rspec-2017-01-untested/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/yoshinorinakagawa/.anyenv/envs/rbenv/versions/2.6.6/bin/ruby -I /Users/yoshinorinakagawa/.anyenv/envs/rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20220302-68110-gqvndx.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yoshinorinakagawa/workspace/practice/everydayrails-rspec-2017-01-untested/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/yoshinorinakagawa/workspace/practice/everydayrails-rspec-2017-01-untested/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/yoshinorinakagawa/workspace/practice/everydayrails-rspec-2017-01-untested/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20220302-68110-x1buhf
