@@ -2,6 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Note, type: :model do
 
+  it "ファクトリで関連するデータを生成する" do
+    note = FactoryBot.create(:note)
+    puts "This note's project is #{note.project.inspect}"
+    puts "This note's user is #{note.user.inspect}"
+  end
+
   before do
     @user = User.create(
       first_name: "Joe",
@@ -29,7 +35,7 @@ RSpec.describe Note, type: :model do
   it "メッセージが無ければ無効であること" do
     note = Note.new(message: nil)
     note.valid?
-    expect(note.errors[:message]).to include("Can't be blank")
+    expect(note.errors[:message]).to include("can't be blank")
   end
 
   describe "文字列に一致するメッセージを検索する" do
