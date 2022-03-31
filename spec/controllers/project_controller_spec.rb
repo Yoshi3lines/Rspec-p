@@ -11,13 +11,10 @@ RSpec.describe ProjectsController, type: :controller do
       it "正常にレスポンスを返すこと" do
         sign_in @user
         get :index
-        expect(response).to be_success
-      end
-
-      it "200レスポンスを返すこと" do
-        sign_in @user
-        get :index
-        expect(response).to have_http_status "200"
+        aggregate_failures do
+          expect(response).to be_success
+          expect(response).to have_http_status "200"
+        end
       end
     end
 
@@ -167,7 +164,7 @@ RSpec.describe ProjectsController, type: :controller do
     end
   end
 
-  describe "destroy" do
+  describe "#destroy" do
     
     context "認可されたユーザーとして" do
       before do
