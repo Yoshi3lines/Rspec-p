@@ -4,6 +4,8 @@ RSpec.describe Note, type: :model do
   let (:user) { FactoryBot.create(:user) }
   let (:project) { FactoryBot.create(:project, owner:user) }
 
+  it { is_expected.to have_attached_file(:attachment) }
+
   it "ユーザー、プロジェクト、メッセージがあれば有効であること" do
     note = Note.new(
       message: "This is the sample note.",
